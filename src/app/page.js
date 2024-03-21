@@ -7,7 +7,6 @@ import Button from './components/Button';
 import Input from './components/Input';
 import Link from 'next/link';
 import { useRouter } from 'next/navigation';
-import { tr } from '@faker-js/faker';
 
 const Home = () => {
   const router = useRouter();
