@@ -7,10 +7,8 @@ import Button from './components/Button';
 import Input from './components/Input';
 import Link from 'next/link';
 import { useRouter } from 'next/navigation';
-// async function getUserData(){
-//   const userdetail = await prisma.User.findMany();
-//   return userdetail;
-// }
+import { tr } from '@faker-js/faker';
+
 const Home = () => {
   const router = useRouter();
   const [userDetail,setUserDetail] = useState({
@@ -24,29 +22,8 @@ const Home = () => {
     console.log(updated);
     setUserDetail(updated);
   }
-  // const data = await getUserData();
-  // console.log(data);
-
+ 
   const handleSubmit = async()=>{
-  
-    // try{
-    //   await fetch('/api/register',{
-    //     method:"POST",
-    //     headers:{
-    //       "Content-Type":"application/json"
-    //     },
-    //     body:JSON.stringify(
-    //       {name:userDetail.name,
-    //         email:userDetail.email,
-    //         password:userDetail.password
-    //       })
-    //   });
-
-    // }
-    // catch(error)
-    // {
-    //   console.error();
-    // }
 
     try {
       const response = await fetch('/api/register', {
@@ -58,7 +35,7 @@ const Home = () => {
       });
       
       if (response.ok) {
-        router.push("/login");
+        router.push("/verifyEmail");
       }
       
       const data = await response.json();
@@ -70,10 +47,12 @@ const Home = () => {
     }
     setUserDetail({...userDetail,name:"",email:"",password:""});
   }
-  return (
-    <>
-      <Topheader/>
+
+  return (<>
+  <Topheader/>
+      
       <form className='w-[576px] h-[691px] border border-[#C1C1C1] border-solid rounded-[20px] mx-auto my-8 flex flex-col gap-4 p-5'>
+        
         <Heading heading="Create your account" className="font-semibold text-[32px] leading-[38.73px] text-[#000000] mx-auto mt-5"/>
         <Input name="name" onChangeHandler={inputChange} className='border rounded-md border-[#C1C1C1] p-[10px]' type="text" placeholder="Enter" labelText="Name"/>
         <Input name="email" onChangeHandler={inputChange} className='border rounded-md border-[#C1C1C1] p-[10px]' type="email" placeholder="Enter" labelText="Email"/>
