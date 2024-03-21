@@ -4,36 +4,46 @@ import React from 'react'
 const Topheader = () => {
   return (<>
     <div className=' h-[100px] bg-[#FFFFFF]'>
-      <div className='flex gap-10 justify-end pr-12 mt-1'>
-        <div className='text-sm'>Help</div>
-        <div className='text-sm'>Orders & Returns</div>
-        <div className='text-sm'>Hii, John</div>
+      <div className='h-9 ml-[83%] bg-[#FFFFFF] flex items-center'>
+        <div className='flex h-[13px] w-[224px] justify-around'>
+          <div className='text-[12px] w-[27px] h-[15px] leading-[14.52px] text-[#333333] font-normal'>Help</div>
+          <div className='text-[12px] w-[97px] h-[15px] leading-[14.52px] text-[#333333] font-normal'>Orders & Returns</div> 
+          <div className='text-[12px] w-[47px] h-[15px] leading-[14.52px] text-[#333333] font-normal'>Hii,John</div>
+        </div>
       </div>
-      <div className='flex justify-normal items-center gap-[21%] p-4'>
-        <Link href={'/'}>
-        <h1 className='text-2xl font-bold'>ECOMMERCE</h1>
+     
+      <div className='flex justify-between items-center px-5'>
+        <Link href={'/'} className='w-[212px] h-[39px]'>
+        <h1 className='text-[32px] leading-[38.73px] font-bold text-[#000000]'>ECOMMERCE</h1>
         </Link>
         <div className='flex gap-10 items-center justify-center'>
-            <div className='font-bold'>Categories</div>
-            <div className='font-bold'>Sale</div>
-            <div className='font-bold'>Clearance</div>
-            <div className='font-bold'>New stock</div>
-            <div className='font-bold'>Trending</div>
+            <div className='font-semibold text-[16px] leading-[19.36px] w-[86px] h-[19px] text-[#000000]'>Categories</div>
+            <div className='font-semibold text-[16px] leading-[19.36px] w-[69px] h-[19px] text-[#000000]'>Sale</div>
+            <div className='font-semibold text-[16px] leading-[19.36px] w-[79px] h-[19px] text-[#000000]'>Clearance</div>
+            <div className='font-semibold text-[16px] leading-[19.36px] w-[82px] h-[19px] text-[#000000]'>New stock</div>
+            <div className='font-semibold text-[16px] leading-[19.36px] w-[69px] h-[19px] text-[#000000]'>Trending</div>
         </div>
-        <div className='flex gap-10 '>
-            <div >
-                <img src="./search.png" alt="search" className='w-5 h-5'/>
+        <div className='flex gap-6'>
+            <div className='w-8 h-8'>
+                <img src="./search.png" alt="search" width="19.53px" height="19.54px"/>
             </div>
-            <div >
-                <img src='./cart.png' alt='cart' className='w-5 h-5'/>
+            <div className='w-8 h-8'>
+                <img src='./cart.png' alt='cart' width="21.75px" height="19.5px"/>
             </div>
         </div>
       </div>
     </div>
-    <div className='h-9 bg-gray-100 flex gap-4 justify-center items-center'>
-      <img src="./leftArrow.png" alt="leftArrow" className='h-5'/>
-      <p className='text-sm'>Get 10% off on business signup</p>
-      <img src="./rightArrow.png" alt="rightArrow" className='h-5'/>
+    <div className='h-9 bg-gray-100 flex'>
+      <div className='h-[18px] w-[290px] flex gap-4 justify-center items-center m-auto'>
+        <div className='h-4 w-4 pt-[2px]'>
+          <img src="./leftArrow.png" alt="leftArrow" className='h-[11px] w-[6px]'/>
+        </div>
+        <p className='text-sm w-[214px] h-[17px] text-[14px] leading-[16.94px] font-medium text-[#000000]'>Get 10% off on business sign up</p>
+        <div className='h-4 w-4 pt-[2px]'>
+          <img src="./rightArrow.png" alt="rightArrow" className='h-[11px] w-[6px]'/>
+        </div>
+      </div>
+     
     </div>
   </>)
 }
