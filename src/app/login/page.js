@@ -51,7 +51,7 @@ const Login = () => {
       <p className="absolute top-[516px] left-[892px] cursor-pointer font-normal text-[16px] leading-[19.36px] text-[#000000] mx-auto">Show</p>
       
       <Button type='button' onClick={handleLogin} className='border rounded-md border-[#C1C1C1] px-[148px] py-[18px] bg-[#000000] w-[500px] h-14 text-white mx-auto my-8' btnText="CREATE ACCOUNT"/>
-      <p className='text-sm mx-auto my-2'>Don't have an Account? 
+      <p className='text-sm mx-auto my-2'>Don&apos;t have an Account? 
       <Link href={'/'}>
       <span className='text-[#000000] cursor-pointer'>SIGN UP</span>
       </Link></p>

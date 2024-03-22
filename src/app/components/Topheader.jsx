@@ -1,3 +1,4 @@
+import Image from 'next/image'
 import Link from 'next/link'
 import React from 'react' 
 
@@ -25,10 +26,10 @@ const Topheader = () => {
         </div>
         <div className='flex gap-6'>
             <div className='w-8 h-8'>
-                <img src="./search.png" alt="search" width="19.53px" height="19.54px"/>
+                <Image src="/search.png" alt="search" width={19.53} height={19.54}/>
             </div>
             <div className='w-8 h-8'>
-                <img src='./cart.png' alt='cart' width="21.75px" height="19.5px"/>
+                <Image src='/cart.png' alt='cart' width={21.75} height={19.5}/>
             </div>
         </div>
       </div>
@@ -36,11 +37,11 @@ const Topheader = () => {
     <div className='h-9 bg-gray-100 flex'>
       <div className='h-[18px] w-[290px] flex gap-4 justify-center items-center m-auto'>
         <div className='h-4 w-4 pt-[2px]'>
-          <img src="./leftArrow.png" alt="leftArrow" className='h-[11px] w-[6px]'/>
+          <Image src="/leftArrow.png" alt="leftArrow" height={11} width={6} style={{width:"auto",height:"auto"}}/>
         </div>
         <p className='text-sm w-[214px] h-[17px] text-[14px] leading-[16.94px] font-medium text-[#000000]'>Get 10% off on business sign up</p>
         <div className='h-4 w-4 pt-[2px]'>
-          <img src="./rightArrow.png" alt="rightArrow" className='h-[11px] w-[6px]'/>
+          <Image src="/rightArrow.png" alt="rightArrow" height={11} width={6} style={{width:"auto",height:"auto"}}/>
         </div>
       </div>
      
