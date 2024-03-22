@@ -30,6 +30,7 @@ const Login = () => {
       });
       
       if (response.ok) {
+        localStorage.setItem("email",userDetail.email);
         router.push('/protectedPage');
       }
       

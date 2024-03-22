@@ -10,6 +10,18 @@ const MainContent = () => {
   const [catdata,setCatdata] = useState([]);
   const [page,setPage] = useState(1);
 
+  const [checkedValues, setCheckedValues] = useState([]);
+
+  const handleCheckboxChange = (event) => {
+    console.log("inside fn ",event.target.value);
+    const { value, checked } = event.target;
+    if (checked) {
+      setCheckedValues((prevValues) => [...prevValues, value]); // Add the value to the array
+    } else {
+      setCheckedValues((prevValues) => prevValues.filter((item) => item !== value)); // Remove the value from the array
+    }
+  };
+
   const handleNext = ()=>{
     const loadData = fakeUser(6*(page+1));
     let aarr= loadData.slice(Math.max(loadData.length - 6, 1))
@@ -44,13 +56,14 @@ const MainContent = () => {
             <Heading heading="We will keep you notified." className="font-normal text-[16px] leading-[26px] text-[#000000] mx-auto mt-5"/>
             <Heading heading="My saved interests!" className="font-medium text-[20px] leading-[26px] text-[#000000] mt-5 text-left"/>
         
-            {catdata?.map((value,i)=>{
+            {catdata?.map((item,i)=>{
               return (
                 <React.Fragment key={i}>
-              <Checkbox label={value.categoryname}/>
+              <Checkbox label={item.categoryname} value={item.categoryname} onChange={handleCheckboxChange}/>
+              
               </React.Fragment>)
             })}
-            
+             {checkedValues.length>0?<div>Checked Values: {(checkedValues).join(", ")}</div>:null}
             <nav className="flex justify-center items-center gap-x-1">
                 <button onClick={handlPrev}
                     type="button"
